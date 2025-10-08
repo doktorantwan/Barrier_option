@@ -167,8 +167,8 @@ def paths_plotter(S, B, K, T):
 
 def vol_heatmap(K=100, B=150, r=0.05, T=1, N=250, M=10_000,
                 S0_min=60, S0_max=120, S0_pts=50,
-                sigma_min=0.2, sigma_max=1, sigma_pts=50, seed=42,
-                savepath='delta_surface.png'):
+                sigma_min=0.2, sigma_max=1, sigma_pts=50, seed=42):
+                #savepath='delta_surface.png'):
 
     S0_vals    = np.linspace(S0_min, S0_max, S0_pts)
     sigma_vals = np.linspace(sigma_min, sigma_max, sigma_pts)
@@ -206,7 +206,7 @@ def vol_heatmap(K=100, B=150, r=0.05, T=1, N=250, M=10_000,
     fig.colorbar(surf, shrink=0.65, aspect=12, pad=0.08, label='Price')
 
     plt.tight_layout()
-    plt.savefig(savepath, dpi=150)
+    #plt.savefig(savepath, dpi=150)
     plt.show()
 
     return s_mesh, sigma_mesh, price_grid, delta_grid
